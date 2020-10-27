@@ -1,3 +1,6 @@
+// Time Complexity:   O(n²)
+// Space Complexity:  O(1)
+
 function selectionSort(arr) {
   const swap = (arr, idx1, idx2) => {
     [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];
@@ -16,3 +19,5 @@ function selectionSort(arr) {
   }
   return arr;
 }
+
+import MyDefaultComponent from './MyDefaultExport';

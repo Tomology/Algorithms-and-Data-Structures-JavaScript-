@@ -1,3 +1,6 @@
+// Time Complexity:   O(n²)
+// Space Complexity:  O(1)
+
 function bubbleSort(arr) {
   const swap = (arr, idx1, idx2) => {
     [arr[idx1], arr[idx2]] = [arr[idx2], arr[idx1]];
@@ -19,3 +22,5 @@ function bubbleSort(arr) {
 
   return arr;
 }
+
+
