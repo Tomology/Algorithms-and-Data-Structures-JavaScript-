@@ -10,6 +10,7 @@ function reverseInt(num) {
     result = result * 10 + digit;
 
     // Remove right most digit using bitwise 'or' operator - e.g. 123 -> 12.3 -> 12
+    // The same can be achieved using Math.floor(num / 10).
     num = (num / 10) | 0;
   }
 
