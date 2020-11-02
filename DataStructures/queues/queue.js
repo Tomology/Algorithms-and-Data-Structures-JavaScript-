@@ -9,7 +9,7 @@ class Queue {
   constructor() {
     this.first = null;
     this.last = null;
-    this.length = 0;
+    this.size = 0;
   }
 
   enqueue(val) {
