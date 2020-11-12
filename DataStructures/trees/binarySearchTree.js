@@ -36,6 +36,7 @@ class BinarySearchTree {
     }
   }
 
+  // breadth first search
   find(val) {
     if (this.root === null) return false;
     let current = this.root;
@@ -52,4 +53,48 @@ class BinarySearchTree {
     if (!found) return false;
     return current;
   }
+
+  depthFirstSearchPreOrder() {
+    let data = [];
+    function traverse(node) {
+      data.push(node.val);
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+    }
+    traverse(this.root);
+    return data;
+  }
+
+  depthFirstSearchPostOrder() {
+    let data = [];
+    function traverse(node) {
+      if (node.left) traverse(node.left);
+      if (node.right) traverse(node.right);
+      data.push(node.val);
+    }
+    traverse(this.root);
+    return data;
+  }
+
+  depthFirstSearchInOrder() {
+    let data = [];
+    function traverse(node) {
+      if (node.left) traverse(node.left);
+      data.push(node.val);
+      if (node.right) traverse(node.right);
+    }
+    traverse(this.root);
+    return data;
+  }
 }
+
+let bst = new BinarySearchTree();
+bst.insert(10);
+bst.insert(5);
+bst.insert(15);
+bst.insert(6);
+bst.insert(16);
+bst.insert(25);
+bst.insert(4);
+console.log(bst.depthFirstSearchPreOrder());
+console.log(bst.depthFirstSearchPostOrder());
