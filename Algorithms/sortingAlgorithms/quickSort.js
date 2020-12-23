@@ -15,7 +15,7 @@ function quickSort(arr, left = 0, right = arr.length - 1) {
   return arr;
 }
 
-function pivot(arr, start = 0, end = arr.length - 1) {
+function pivot(arr, start, end) {
   // We are assuming the pivot is always the first element
   let pivot = arr[start];
   let swapIdx = start;
