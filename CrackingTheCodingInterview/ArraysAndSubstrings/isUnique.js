@@ -2,24 +2,24 @@
 
 // ASCII (128 characters), extended ASCII (256 characters) or Unicode (143,859 characters) String? Assume ASCII here.
 
-// Below implementation is using additional data structure: object.
-
+// Implementation with additional data structure
 function isUnique(str) {
   if (str.length > 128) {
     return false;
   }
 
-  let lookup = {};
+  const lookup = new Set();
 
   for (let letter of str) {
-    if (lookup[letter]) {
+    if (lookup.has(letter)) {
       return false;
     } else {
-      lookup[letter] = 1;
+      lookup.add(letter);
     }
   }
 
   return true;
 }
 
-isUnique("abcdefghijklmnopqrstuvwxyz1234567890");
+console.log(isUnique("abcdefghijklmnopqrstuvwxyz1234567890"));
+console.log(isUnique("awbcdefghijklmnopqrstuvwxyz1234567890"));
