@@ -1,3 +1,4 @@
+// Only works for positive integers
 function reverseInt(num) {
   let result = 0;
   let digit = 0;
