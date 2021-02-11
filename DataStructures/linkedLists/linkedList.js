@@ -8,17 +8,6 @@ class Node {
   }
 }
 
-
-function catArray(array) {
-  for (let i = 0; i < array.length; i++) {
-    for (let j = 0; j < array.length; j++) {
-      if (i !== j && array[i] === array[j]) {
-        console.log(`${i} element is equal to ${j} element`)
-      }
-    }
-  }
-}
-
 class MyLinkedList {
   constructor() {
     this.head = null;
