@@ -12,17 +12,14 @@ var findMedianSortedArrays = function (nums1, nums2) {
       j++;
     }
   }
-
-  while (i < nums2.length) {
+  while (i < nums1.length) {
     mergedArr.push(nums1[i]);
     i++;
   }
-
   while (j < nums2.length) {
     mergedArr.push(nums2[j]);
     j++;
   }
-
   let mid = mergedArr.length / 2;
   if (mid % 1 === 0) {
     return (mergedArr[mid] + mergedArr[mid - 1]) / 2;
@@ -31,4 +28,4 @@ var findMedianSortedArrays = function (nums1, nums2) {
   }
 };
 
-console.log(findMedianSortedArrays([1, 2], [3, 4]));
+console.log(findMedianSortedArrays([1, 3], [2]));
